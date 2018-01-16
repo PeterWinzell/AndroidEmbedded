@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.volvocars.sensortestview.SensorActivity">
+
+    <TextView
+        android:id="@+id/rpmOut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="207dp"
+        android:text="2000 rpm"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/colorAccent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rpmLabel"
+        app:layout_constraintTop_toBottomOf="@+id/speedOut" />
+
+    <TextView
+        android:id="@+id/speedOut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="125dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="30dp"
+        android:text="0 km/h"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/colorAccent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/rpmOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/speedLabel2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/speedLabel2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="133dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="Speed:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/colorAccent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/rpmLabel"
+        app:layout_constraintEnd_toStartOf="@+id/speedOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rpmLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="198dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginStart="16dp"
+        android:text="RPM:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/colorAccent"
+        android:textColorLink="@color/colorAccent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rpmOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedLabel2"
+        tools:layout_margin="?android:attr/primaryContentAlpha" />
+
+</android.support.constraint.ConstraintLayout>
