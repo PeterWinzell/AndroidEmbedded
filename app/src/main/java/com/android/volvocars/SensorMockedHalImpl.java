@@ -4,7 +4,7 @@ import android.hardware.automotive.vehicle.V2_0.VehicleProperty;
 import android.hardware.automotive.vehicle.V2_0.VehiclePropertyChangeMode;
 import android.os.IHwBinder;
 
-import com.android.car.ICarImpl;
+import com.android.volvocars.mockedvehiclehal.ICarImpl;
 import com.android.car.CarPowerManagementService;
 import com.android.car.SystemInterface;
 
@@ -31,8 +31,7 @@ import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
-
-
+import android.util.Log;
 
 
 import com.android.volvocars.mockedvehiclehal.VehiclePropConfigBuilder;
@@ -59,49 +58,86 @@ public class SensorMockedHalImpl extends SensorHalImpl {
     static final long DEFAULT_WAIT_TIMEOUT_MS = 3000;
     static final long SHORT_WAIT_TIMEOUT_MS = 500;
 
-    private CarSensorManager mCarSensorManager;
+    // private CarSensorManager mCarSensorManager;
     private MockedVehicleHal mMockedVehicleHal;
     private FakeSystemInterface mFakeSystemInterface;
     private ICarImpl mCarImpl;
 
-    private static final IBinder mCarServiceToken = new Binder();
+    private static final IBinder mCarServiceToken = new Binder();;
     private static boolean mRealCarServiceReleased = false;
 
-    private final Handler mMainHandler = new Handler(Looper.getMainLooper());
-    private final Semaphore mWaitForMain = new Semaphore(0);
-
-
-    private final Map<VehiclePropConfigBuilder, MockedVehicleHal.VehicleHalPropertyHandler> mHalConfig =
-            new HashMap<>();
+    private Handler mMainHandler;
+    private Semaphore mWaitForMain;
+    private Map<VehiclePropConfigBuilder, MockedVehicleHal.VehicleHalPropertyHandler> mHalConfig;
 
     public SensorMockedHalImpl(Context context) {
         super(context);
-        addHalProperties();
         startEventInjections();
 
     }
 
-    protected void setUp() throws Exception{
+    private void initDataStructures(){
 
-       // releaseRealCarService(getContext());
-        //TODO: maybe a release of the real car service here...but lets discuss this later.
+        mRealCarServiceReleased = false;
+
+        mMainHandler = new Handler(Looper.getMainLooper());
+        mWaitForMain = new Semaphore(0);
+        mHalConfig = new HashMap<>(10);
+
         mMockedVehicleHal = new MockedVehicleHal();
         mFakeSystemInterface = new FakeSystemInterface();
 
+        addHalProperties();
+    }
+
+    protected void setUp() throws Exception{
+
+        initDataStructures();
+
         Context context = getCarServiceContext();
-        mCarImpl = new ICarImpl(context,mMockedVehicleHal,mFakeSystemInterface,null);
+        mCarImpl = new ICarImpl(context,mMockedVehicleHal,mFakeSystemInterface);
+
+        if (mCarImpl == null) {
+            Log.d("SensorMockedHalImpl", " failed to allocate mCarImpl");
+            return;
+        }
+
+        Log.d("SensorMockedHalImp"," mCarImpl allocated");
 
         initMockedHal(false);
 
-        mCar = new android.car.Car(getCarServiceContext(),mCarImpl,null);
+        mCar = new android.car.Car(context,mCarImpl,null);
+
+        if (mCar == null){
+            Log.d("SensorMockedHalImp"," mCar failed to allocated");
+            return;
+        }
+
+        Log.d("SensorMockedHalImp"," mCar allocated");
 
         mCarSensorManager = (CarSensorManager) mCar.getCarManager(Car.SENSOR_SERVICE);
-        mSensorListener = new SensorListener();
-        mCarSensorManager.registerListener(mSensorListener,CarSensorManager.SENSOR_TYPE_RPM,CarSensorManager.SENSOR_TYPE_CAR_SPEED);
+
+        if (mCarSensorManager == null){
+            Log.d("SensorMockedHalImp"," mCarSensorManager not found");
+            return;
+        }
+
+        Log.d("SensorMockedHalImp"," mCarSensorManager found");
+
+        mSpeedListener = new SensorListener();
+        mRpmListener = new SensorListener();
+
+        // mCarSensorManager.registerListener(mSensorListener,CarSensorManager.SENSOR_TYPE_RPM,CarSensorManager.SENSOR_TYPE_CAR_SPEED);
+
+        //TODO: check what the fuck this rate is...
+        mCarSensorManager.registerListener(mRpmListener, CarSensorManager.SENSOR_TYPE_RPM,1);
+        mCarSensorManager.registerListener(mSpeedListener, CarSensorManager.SENSOR_TYPE_CAR_SPEED,1);
+
+
 
         // Is there a CarSensorManager
         assertTrue(mCarSensorManager.isSensorSupported(CarSensorManager.SENSOR_TYPE_CAR_SPEED));
-
+        assertTrue(mCarSensorManager.isSensorSupported(CarSensorManager.SENSOR_TYPE_RPM));
     }
 
 
@@ -121,10 +157,10 @@ public class SensorMockedHalImpl extends SensorHalImpl {
     }
 
     protected Context getCarServiceContext() throws PackageManager.NameNotFoundException{
-      return SensorActivity.getContext();
+      return SensorActivity.getContext().createPackageContext("android",Context.CONTEXT_IGNORE_SECURITY);
     }
 
-    private synchronized void initMockedHal(boolean release) {
+    private void initMockedHal(boolean release) {
         if (release) {
             mCarImpl.release();
         }
@@ -144,8 +180,8 @@ public class SensorMockedHalImpl extends SensorHalImpl {
         }
 
         mRealCarServiceReleased = true;  // To make sure it was called once.
-
         Object waitForConnection = new Object();
+
         android.car.Car car = android.car.Car.createCar(context, new ServiceConnection() {
             @Override
             public void onServiceConnected(ComponentName name, IBinder service) {
@@ -239,19 +275,24 @@ public class SensorMockedHalImpl extends SensorHalImpl {
                     while (true) {
                         Random r = new Random();
                         Float speed =  (float) r.nextInt(80);
+                        if (speed == 0) speed = 0.01f; // bug in com.android.car.DrivingStatePolicy
                         Float rpm = (float) r.nextInt(8000);
-
-                        mMockedVehicleHal.injectEvent(VehiclePropValueBuilder.newBuilder(VehicleProperty.PERF_VEHICLE_SPEED)
-                                .addFloatValue(speed)
-                                .setTimestamp()
-                                .build());
-
 
                         mMockedVehicleHal.injectEvent(VehiclePropValueBuilder.newBuilder(VehicleProperty.ENGINE_RPM)
                                 .addFloatValue(rpm)
                                 .setTimestamp()
                                 .build());
 
+                        mMockedVehicleHal.injectEvent(VehiclePropValueBuilder.newBuilder(VehicleProperty.PERF_VEHICLE_SPEED)
+                                .addFloatValue(speed)
+                                .setTimestamp()
+                                .build());
+
+                       mMockedVehicleHal.debugDump();
+
+
+
+                        yield();
                         sleep(200);
                     }
                 }

@@ -10,6 +10,12 @@
     <uses-permission android:name="android.car.permission.CAR_SPEED">
     </uses-permission>
 
+    <uses-feature android:name="com.android.car" />
+    <uses-feature android:name="android.car" />
+
+    <uses-feature android:name="android.hardware.type.automotive" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

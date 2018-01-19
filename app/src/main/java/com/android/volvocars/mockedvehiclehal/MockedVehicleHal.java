@@ -68,7 +68,7 @@ public class MockedVehicleHal extends IVehicle.Stub {
                 while (mSubscribers.get(propId) == null) {
                     long waitMillis = startTime - SystemClock.elapsedRealtime() + timeoutMillis;
                     if (waitMillis < 0) break;
-                    Thread.currentThread().wait(); //TODO: PW added Thread.currentThread could not resolve wait()...
+                    wait(); //TODO: PW added Thread.currentThread could not resolve wait()...
                 }
                 return mSubscribers.get(propId) != null;
             }
@@ -151,7 +151,8 @@ public class MockedVehicleHal extends IVehicle.Stub {
             if (subscribers == null) {
                 subscribers = new ArrayList<>();
                 mSubscribers.put(opt.propId, subscribers);
-                Thread.currentThread().notifyAll(); //TODO: PW This should be the same as notifyAll()
+                notifyAll();
+                // Thread.currentThread().notifyAll(); //TODO: PW This should be the same as notifyAll()
             }
             subscribers.add(callback);
         }

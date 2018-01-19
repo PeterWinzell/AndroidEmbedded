@@ -31,7 +31,8 @@ public class SensorHalImpl extends CarSensor implements SensorData {
     protected CarSensorManager mCarSensorManager;
     protected final DefaultServiceConnectionListener mConnectionListener =
             new DefaultServiceConnectionListener();
-    protected SensorListener mSensorListener;
+    protected SensorListener mRpmListener;
+    protected SensorListener mSpeedListener;
 
     protected int mSpeed,mRpm;
 
@@ -43,9 +44,14 @@ public class SensorHalImpl extends CarSensor implements SensorData {
 
         mCar = Car.createCar(mContext.getApplicationContext(), mConnectionListener);
         mCarSensorManager = (CarSensorManager) mCar.getCarManager(Car.SENSOR_SERVICE);
-        mSensorListener = new SensorListener();
-        mCarSensorManager.registerListener(mSensorListener,CarSensorManager.SENSOR_TYPE_RPM,
-                CarSensorManager.SENSOR_TYPE_CAR_SPEED);
+
+        mRpmListener = new SensorListener();
+        mSpeedListener = new SensorListener();
+
+        mCarSensorManager.registerListener(mRpmListener,CarSensorManager.SENSOR_TYPE_RPM,
+                5);
+        mCarSensorManager.registerListener(mSpeedListener,CarSensorManager.SENSOR_TYPE_CAR_SPEED,
+                5);
 
         if (mCarSensorManager == null)
             throw new Exception(" Car Sensor service unavailable ");
@@ -73,15 +79,20 @@ public class SensorHalImpl extends CarSensor implements SensorData {
             synchronized (mSync){
                 if (carSensorEvent.sensorType == CarSensorManager.SENSOR_TYPE_CAR_SPEED){
                     CarSpeedData data = null;
-                    carSensorEvent.getCarSpeedData(data);
+                    data = carSensorEvent.getCarSpeedData(data);
                     if (data != null) {
                         mSpeed = (int) Math.round(3.6 * data.carSpeed);
                     }
+                    else
+                        mSpeed = 0;
                 }
                 else if(carSensorEvent.sensorType == CarSensorManager.SENSOR_TYPE_RPM){
                     RpmData data = null;
-                    carSensorEvent.getRpmData(data);
-                    mRpm = (int )Math.round(data.rpm);
+                    data = carSensorEvent.getRpmData(data);
+                    if (data != null)
+                        mRpm = (int )Math.round(data.rpm);
+                    else
+                        mRpm = 0;
                 }
             }
         }
