@@ -11,7 +11,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ce842c5-7c76-4805-8bc4-b775da50fc5a" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/android/volvocars/sensortestview/ExampleInstrumentedTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/android/jaywaycars/sensortestview/ExampleInstrumentedTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/CarSensor.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/CarSensor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorController.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorDataImplementationFactory.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorDataImplementationFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorDataMockupImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorDataMockupImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorHalImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorHalImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorImplementations.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorImplementations.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorMockedHalImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorMockedHalImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorModel.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/VehiclePropValueBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/VehiclePropValueBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/ICarImpl.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/ICarImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/MockedVehicleHal.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/MockedVehicleHal.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/VehiclePropConfigBuilder.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/VehiclePropConfigBuilder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/sensortestview/SensorActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/sensortestview/SensorActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/sensortestview/SpeedRpmView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/sensortestview/SpeedRpmView.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/test/java/com/android/volvocars/sensortestview/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/com/android/jaywaycars/sensortestview/ExampleUnitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/classAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/javaCompile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/javaCompile/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sensor.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sensor.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,10 +63,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="SensorMockedHalImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorMockedHalImpl.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorMockedHalImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="278" column="60" lean-forward="false" selection-start-line="278" selection-start-column="60" selection-end-line="278" selection-end-column="60" />
+              <caret line="271" column="60" lean-forward="false" selection-start-line="271" selection-start-column="60" selection-end-line="271" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,10 +105,10 @@
         </entry>
       </file>
       <file leaf-file-name="ICarImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/ICarImpl.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/ICarImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1044">
-              <caret line="87" column="57" lean-forward="false" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
+              <caret line="78" column="57" lean-forward="false" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,7 +147,7 @@
         </entry>
       </file>
       <file leaf-file-name="MockedVehicleHal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/MockedVehicleHal.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/MockedVehicleHal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1440">
               <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
@@ -2008,6 +2035,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorHalImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorMockedHalImpl.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorMockedHalImpl.java" />
       </list>
     </option>
   </component>
@@ -2082,10 +2110,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sensortestview" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2101,25 +2125,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sensortestview" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SensorTestView" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="volvocars" />
+              <option name="myItemId" value="jaywaycars" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2160,7 +2166,7 @@
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
-    <property name="device.picker.selection" value="Pixel_C_API_27_2" />
+    <property name="device.picker.selection" value="Pixel_C_API_27_3" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
     <property name="android.profiler.active" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Signing/test.jks" />
@@ -2242,10 +2248,10 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="com.android.volvocars.sensortestview.SensorActivity" />
+      <option name="ACTIVITY_CLASS" value="com.android.jaywaycars.sensortestview.SensorActivity" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516816006961" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516830820959" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -2325,7 +2331,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516816006962" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516830820959" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2380,7 +2386,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516816006962" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516830820959" />
       </method>
     </configuration>
     <configuration default="true" type="AppEngineRunConfiguration" factoryName="App Engine DevAppServer">
@@ -2438,6 +2444,27 @@
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$" />
       <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2584,7 +2611,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516816006966" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1516830820960" />
       </method>
     </configuration>
     <list size="2">
@@ -2642,24 +2669,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3939" y="43" width="1722" height="989" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32792583" sideWeight="0.48788732" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792583" sideWeight="0.48788732" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2814136" sideWeight="0.76573426" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14196242" sideWeight="0.48977336" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35225955" sideWeight="0.096658714" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35225955" sideWeight="0.10083532" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32672232" sideWeight="0.8662244" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792583" sideWeight="0.48394367" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2792584" sideWeight="0.7167832" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35225955" sideWeight="0.9033413" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35225955" sideWeight="0.8991647" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2827225" sideWeight="0.23076923" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37231505" sideWeight="0.78571427" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908458" sideWeight="0.49761337" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45302713" sideWeight="0.8413488" order="3" side_tool="false" content_ui="tabs" />
@@ -2672,10 +2700,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find Sample Code" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38088828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14196242" sideWeight="0.48977336" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2685,8 +2711,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorMockedHalImpl.java</url>
-          <line>13</line>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorMockedHalImpl.java</url>
+          <line>12</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -2697,19 +2723,19 @@
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorController.java</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorController.java</url>
           <line>29</line>
           <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorController.java</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorController.java</url>
           <line>43</line>
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/MockedVehicleHal.java</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/MockedVehicleHal.java</url>
           <line>152</line>
           <properties />
           <option name="timeStamp" value="70" />
@@ -2783,7 +2809,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/android/volvocars/sensortestview/ExampleInstrumentedTest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/android/jaywaycars/sensortestview/ExampleInstrumentedTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
@@ -2820,10 +2846,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorDataMockupImpl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorDataMockupImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2848,17 +2875,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorModel.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/sensortestview/SensorActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/sensortestview/SensorActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2926,24 +2955,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/VehiclePropValueBuilder.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/VehiclePropValueBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding>
-            <element signature="e#3292#3293#0" expanded="false" />
+            <element signature="e#3293#3294#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorImplementations.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorImplementations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorHalImpl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorHalImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="27" column="59" lean-forward="true" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
@@ -2953,14 +2983,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorData.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorController.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
@@ -2968,14 +2999,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/CarSensor.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/CarSensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorDataImplementationFactory.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorDataImplementationFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="28" />
@@ -2983,12 +3015,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/VehiclePropConfigBuilder.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/VehiclePropConfigBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
-            <element signature="e#3702#3703#0" expanded="false" />
+            <element signature="e#3703#3704#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3053,7 +3085,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/MockedVehicleHal.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/MockedVehicleHal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
           <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
@@ -3063,10 +3095,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/mockedvehiclehal/ICarImpl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/mockedvehiclehal/ICarImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1044">
-          <caret line="87" column="57" lean-forward="false" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
+          <caret line="78" column="57" lean-forward="false" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -3097,10 +3129,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/volvocars/SensorMockedHalImpl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/android/jaywaycars/SensorMockedHalImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="278" column="60" lean-forward="false" selection-start-line="278" selection-start-column="60" selection-end-line="278" selection-end-column="60" />
+          <caret line="271" column="60" lean-forward="false" selection-start-line="271" selection-start-column="60" selection-end-line="271" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
