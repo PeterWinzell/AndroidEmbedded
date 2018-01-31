@@ -3,9 +3,12 @@ package com.android.jaywaycars.sensortestview;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.android.jaywaycars.SensorController;
+
+
 
 public class SensorActivity extends AppCompatActivity {
 
@@ -23,6 +26,7 @@ public class SensorActivity extends AppCompatActivity {
 
         speedOutputView = (TextView) findViewById(R.id.speedOut);
         rpmOutputView = (TextView) findViewById(R.id.rpmOut);
+       // mspeedRpmView = (View) findViewById(R.id.spee)
 
         setContext(getApplicationContext());
 

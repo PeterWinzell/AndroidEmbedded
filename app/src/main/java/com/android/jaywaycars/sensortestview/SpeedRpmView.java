@@ -19,15 +19,17 @@ public class SpeedRpmView extends View {
     private Paint getPaintObject(){
         Paint paint = new Paint();
         paint.setStyle(Paint.Style.FILL);
-        paint.setColor(Color.BLACK);
+        paint.setColor(Color.WHITE);
 
         return paint;
     }
 
+
     @Override
     protected void onDraw(Canvas canvas){
         super.onDraw(canvas);
-        Paint painter = getPaintObject();
-        // canvas.
+        Paint paint = getPaintObject();
+
+        canvas.drawLine(50,50,200,200,paint);
     }
 }

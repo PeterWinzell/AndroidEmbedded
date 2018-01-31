@@ -128,14 +128,13 @@ public class SensorMockedHalImpl extends SensorHalImpl {
 
 
 
-        // Is there a CarSensorManager
+        // Is there support for the sensormanager
         assertTrue(mCarSensorManager.isSensorSupported(CarSensorManager.SENSOR_TYPE_CAR_SPEED));
         assertTrue(mCarSensorManager.isSensorSupported(CarSensorManager.SENSOR_TYPE_RPM));
     }
 
 
     private  void addHalProperties(){
-
 
         addProperty(VehicleProperty.PERF_VEHICLE_SPEED,
                 VehiclePropValueBuilder.newBuilder(VehicleProperty.PERF_VEHICLE_SPEED)
