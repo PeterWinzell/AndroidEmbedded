@@ -267,8 +267,8 @@ public class SensorMockedHalImpl extends SensorHalImpl {
                     while (true) {
                         Random r = new Random();
                         Float speed =  (float) r.nextInt(80);
-                        if (speed == 0) speed = 0.01f; // bug in com.android.car.DrivingStatePolicy
-                        Float rpm = (float) r.nextInt(8000);
+                        if (speed == 0) speed = 1f; // bug in com.android.car.DrivingStatePolicy
+                        Float rpm = (float) r.nextInt(9000);
 
                         mMockedVehicleHal.injectEvent(VehiclePropValueBuilder.newBuilder(VehicleProperty.ENGINE_RPM)
                                 .addFloatValue(rpm)

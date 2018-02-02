@@ -4,7 +4,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
+//import android.widget.TextView;
+
+import com.android.volvocars.drawsomestuff.SinGauge;
+import com.android.volvocars.drawsomestuff.TextView;
 
 import com.android.jaywaycars.SensorController;
 
@@ -13,7 +16,7 @@ import com.android.jaywaycars.SensorController;
 public class SensorActivity extends AppCompatActivity {
 
     private TextView speedOutputView;
-    private TextView rpmOutputView;
+    private SinGauge rpmOutputView;
     private SensorController controller;
 
     private static Context mContext;
@@ -22,10 +25,10 @@ public class SensorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sensor);
-
-        speedOutputView = (TextView) findViewById(R.id.speedOut);
-        rpmOutputView = (TextView) findViewById(R.id.rpmOut);
+        // setContentView(R.layout.activity_sensor);
+        setContentView(R.layout.lin_layout);
+        speedOutputView = (TextView) findViewById(R.id.textSview);
+        rpmOutputView = (SinGauge) findViewById(R.id.sinGview);
        // mspeedRpmView = (View) findViewById(R.id.spee)
 
         setContext(getApplicationContext());
@@ -43,10 +46,10 @@ public class SensorActivity extends AppCompatActivity {
     }
 
     public void updateSpeed(int speed){
-        speedOutputView.setText(Integer.toString(speed));
+        speedOutputView.setValue(speed);
     }
 
     public void updateRPM(int rpm){
-        rpmOutputView.setText(Integer.toString(rpm));
+        rpmOutputView.setValue(rpm);
     }
 }

@@ -1,0 +1,50 @@
+02-02 13:11:46.667 5340-5340/com.android.volvocars.sensortestview I/zygote: Not late-enabling -Xcheck:jni (already on)
+02-02 13:11:46.677 5340-5340/com.android.volvocars.sensortestview W/zygote: Unexpected CPU variant for X86 using defaults: x86
+02-02 13:11:46.698 5340-5347/com.android.volvocars.sensortestview E/zygote: Failed sending reply to debugger: Broken pipe
+02-02 13:11:46.698 5340-5347/com.android.volvocars.sensortestview I/zygote: Debugger is no longer active
+02-02 13:11:46.764 5340-5340/com.android.volvocars.sensortestview D/SensorMockedHalImp:  mCarImpl allocated
+02-02 13:11:46.768 5340-5340/com.android.volvocars.sensortestview E/CAR.SENSOR.SensorHalSer: init:  unable to get property config for SENSOR_TYPE_WHEEL_TICK_DISTANCE
+02-02 13:11:46.768 5340-5340/com.android.volvocars.sensortestview D/ ICarImpl:  Vehicle Hal initialized 
+02-02 13:11:46.768 5340-5340/com.android.volvocars.sensortestview E/CAR.SENSOR.SensorHalSer: sensor type not available 0x16
+02-02 13:11:46.769 5340-5340/com.android.volvocars.sensortestview I/CAR.SENSOR: Sensor not supported:6
+02-02 13:11:46.769 5340-5340/com.android.volvocars.sensortestview I/CAR.SENSOR: Sensor not supported:7
+02-02 13:11:46.769 5340-5340/com.android.volvocars.sensortestview W/CAR.SENSOR: No brake info from car. Driving state will be always fully restrictive
+02-02 13:11:46.769 5340-5340/com.android.volvocars.sensortestview D/ ICarImpl:  Vehicle Services initialized
+02-02 13:11:46.769 5340-5340/com.android.volvocars.sensortestview D/SensorMockedHalImp:  mCar allocated
+02-02 13:11:46.769 5340-5340/com.android.volvocars.sensortestview D/SensorMockedHalImp:  mCarSensorManager found
+02-02 13:11:46.816 5340-5360/com.android.volvocars.sensortestview D/OpenGLRenderer: HWUI GL Pipeline
+02-02 13:11:46.876 5340-5360/com.android.volvocars.sensortestview I/zygote: android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
+02-02 13:11:46.876 5340-5360/com.android.volvocars.sensortestview I/OpenGLRenderer: Initialized EGL, version 1.4
+02-02 13:11:46.876 5340-5360/com.android.volvocars.sensortestview D/OpenGLRenderer: Swap behavior 1
+02-02 13:11:46.877 5340-5360/com.android.volvocars.sensortestview W/OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+02-02 13:11:46.877 5340-5360/com.android.volvocars.sensortestview D/OpenGLRenderer: Swap behavior 0
+02-02 13:11:46.880 5340-5360/com.android.volvocars.sensortestview D/EGL_emulation: eglCreateContext: 0x9fc05600: maj 3 min 1 rcv 4
+02-02 13:11:46.888 5340-5360/com.android.volvocars.sensortestview D/EGL_emulation: eglMakeCurrent: 0x9fc05600: ver 3 1 (tinfo 0x9fc03300)
+02-02 13:11:46.888 5340-5360/com.android.volvocars.sensortestview E/eglCodecCommon: glUtilsParamSize: unknow param 0x000082da
+02-02 13:11:46.888 5340-5360/com.android.volvocars.sensortestview E/eglCodecCommon: glUtilsParamSize: unknow param 0x000082da
+02-02 13:11:46.889 5340-5360/com.android.volvocars.sensortestview E/eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
+02-02 13:11:46.889 5340-5360/com.android.volvocars.sensortestview E/eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
+02-02 13:11:46.889 5340-5360/com.android.volvocars.sensortestview E/eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
+02-02 13:11:46.889 5340-5360/com.android.volvocars.sensortestview E/eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
+02-02 13:11:46.955 5340-5360/com.android.volvocars.sensortestview D/EGL_emulation: eglMakeCurrent: 0x9fc05600: ver 3 1 (tinfo 0x9fc03300)
+02-02 13:11:49.604 5340-5356/com.android.volvocars.sensortestview E/AndroidRuntime: FATAL EXCEPTION: VEHICLE-HAL
+                                                                                    Process: com.android.volvocars.sensortestview, PID: 5340
+                                                                                    java.lang.NullPointerException: Attempt to read from field 'int[] android.car.hardware.CarSensorEvent.intValues' on a null object reference
+                                                                                        at com.android.car.DrivingStatePolicy.isParkingBrakeApplied(DrivingStatePolicy.java:184)
+                                                                                        at com.android.car.DrivingStatePolicy.recalcDrivingStateLocked(DrivingStatePolicy.java:166)
+                                                                                        at com.android.car.DrivingStatePolicy.handleSensorEvent(DrivingStatePolicy.java:146)
+                                                                                        at com.android.car.DrivingStatePolicy.access$000(DrivingStatePolicy.java:36)
+                                                                                        at com.android.car.DrivingStatePolicy$1.onSensorChanged(DrivingStatePolicy.java:52)
+                                                                                        at com.android.car.CarSensorService$SensorClient.dispatchSensorUpdate(CarSensorService.java:869)
+                                                                                        at com.android.car.CarSensorService.processSensorData(CarSensorService.java:301)
+                                                                                        at com.android.car.CarSensorService.onSensorEvents(CarSensorService.java:313)
+                                                                                        at com.android.car.hal.SensorHalService.handleHalEvents(SensorHalService.java:161)
+                                                                                        at com.android.car.hal.VehicleHal.onPropertyEvent(VehicleHal.java:503)
+                                                                                        at com.android.car.hal.HalClient$CallbackHandler.handleMessage(HalClient.java:212)
+                                                                                        at android.os.Handler.dispatchMessage(Handler.java:106)
+                                                                                        at android.os.Looper.loop(Looper.java:164)
+                                                                                        at android.os.HandlerThread.run(HandlerThread.java:65)
+02-02 13:11:49.837 5340-5360/com.android.volvocars.sensortestview D/EGL_emulation: eglMakeCurrent: 0x9fc05600: ver 3 1 (tinfo 0x9fc03300)
+02-02 13:12:05.375 5340-5345/com.android.volvocars.sensortestview I/zygote: Do partial code cache collection, code=29KB, data=29KB
+02-02 13:12:05.375 5340-5345/com.android.volvocars.sensortestview I/zygote: After code cache collection, code=29KB, data=29KB
+02-02 13:12:05.376 5340-5345/com.android.volvocars.sensortestview I/zygote: Increasing code cache capacity to 128KB
