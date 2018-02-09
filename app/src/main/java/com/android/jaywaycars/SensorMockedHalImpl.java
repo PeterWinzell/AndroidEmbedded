@@ -136,9 +136,12 @@ public class SensorMockedHalImpl extends SensorHalImpl {
 
     private  void addHalProperties(){
 
+        addProperty(VehicleProperty.PARKING_BRAKE_ON,
+                VehiclePropValueBuilder.newBuilder(VehicleProperty.PARKING_BRAKE_ON).setBooleanValue(false).build());
+
         addProperty(VehicleProperty.PERF_VEHICLE_SPEED,
                 VehiclePropValueBuilder.newBuilder(VehicleProperty.PERF_VEHICLE_SPEED)
-                        .addFloatValue(0f)
+                        .addFloatValue(1f)
                         .build());
 
         addProperty(VehicleProperty.ENGINE_RPM,
@@ -264,10 +267,17 @@ public class SensorMockedHalImpl extends SensorHalImpl {
             {
                 try {
 
+                    // If we don't add a value for the handbrake we will crash if we inject the speed of 0 , due to
+                    // a bug in DrivingStatePolicyClass
+                    mMockedVehicleHal.injectEvent(VehiclePropValueBuilder.newBuilder(VehicleProperty.PARKING_BRAKE_ON)
+                            .setBooleanValue(false)
+                            .setTimestamp()
+                            .build());
+
                     while (true) {
                         Random r = new Random();
                         Float speed =  (float) r.nextInt(80);
-                        if (speed == 0) speed = 1f; // bug in com.android.car.DrivingStatePolicy
+                        // Log.d("************* mocked vehicle hal ************ ",Float.toString(speed));
                         Float rpm = (float) r.nextInt(9000);
 
                         mMockedVehicleHal.injectEvent(VehiclePropValueBuilder.newBuilder(VehicleProperty.ENGINE_RPM)
@@ -280,9 +290,7 @@ public class SensorMockedHalImpl extends SensorHalImpl {
                                 .setTimestamp()
                                 .build());
 
-                       mMockedVehicleHal.debugDump();
-
-
+                       // mMockedVehicleHal.debugDump();
 
                         yield();
                         sleep(200);
