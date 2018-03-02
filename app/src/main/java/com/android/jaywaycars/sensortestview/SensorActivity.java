@@ -45,11 +45,12 @@ public class SensorActivity extends AppCompatActivity {
         mContext =  mCtx;
     }
 
-    public void updateSpeed(int speed){
+    // Needs to be synchrinized since the value are updated from the event thread
+    public synchronized void updateSpeed(int speed){
         speedOutputView.setValue(speed);
     }
 
-    public void updateRPM(int rpm){
+    public synchronized void updateRPM(int rpm){
         rpmOutputView.setValue(rpm);
     }
 }

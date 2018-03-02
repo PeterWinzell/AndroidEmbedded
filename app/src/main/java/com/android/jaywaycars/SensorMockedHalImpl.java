@@ -21,6 +21,7 @@ import android.content.pm.PackageManager;
 import android.hardware.automotive.vehicle.V2_0.VehiclePropValue;
 import android.hardware.automotive.vehicle.V2_0.VehiclePropertyAccess;
 
+import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
@@ -31,7 +32,7 @@ import android.util.Log;
 import com.android.jaywaycars.mockedvehiclehal.VehiclePropConfigBuilder;
 import com.android.jaywaycars.mockedvehiclehal.MockedVehicleHal;
 import com.android.jaywaycars.sensortestview.SensorActivity;
-
+import com.android.jaywaycars.sensortestview.SimulatorTcpClient;
 
 
 import java.util.HashMap;
@@ -62,6 +63,8 @@ public class SensorMockedHalImpl extends SensorHalImpl {
     private Handler mMainHandler;
     private Semaphore mWaitForMain;
     private Map<VehiclePropConfigBuilder, MockedVehicleHal.VehicleHalPropertyHandler> mHalConfig;
+
+    private SimulatorTcpClient mSimulatorTcpClient;
 
     public SensorMockedHalImpl(Context context) {
         super(context);
@@ -267,6 +270,7 @@ public class SensorMockedHalImpl extends SensorHalImpl {
             {
                 try {
 
+                    new ConnectTask().execute("");
                     // If we don't add a value for the handbrake we will crash if we inject the speed of 0 , due to
                     // a bug in DrivingStatePolicyClass
                     mMockedVehicleHal.injectEvent(VehiclePropValueBuilder.newBuilder(VehicleProperty.PARKING_BRAKE_ON)
@@ -290,8 +294,8 @@ public class SensorMockedHalImpl extends SensorHalImpl {
                                 .setTimestamp()
                                 .build());
 
-                       // mMockedVehicleHal.debugDump();
-
+                       //mMockedVehicleHal.debugDump();
+                       //Log.d(" SensorMockedVehicleHalImpl"," still running...");
                         yield();
                         sleep(200);
                     }
@@ -365,5 +369,26 @@ public class SensorMockedHalImpl extends SensorHalImpl {
         }
 
 
+    }
+
+    private class ConnectTask extends AsyncTask<String, String, SimulatorTcpClient> {
+
+        @Override
+        protected SimulatorTcpClient doInBackground(String... message) {
+            //we create a TCPClient object and
+            mSimulatorTcpClient = new SimulatorTcpClient(new SimulatorTcpClient.OnMessageReceived() {
+                @Override
+                //here the messageReceived method is implemented
+                public void messageReceived(String message) {
+                    //this method calls the onProgressUpdate
+                    //publishProgress(message);
+                    Log.i("Debug","Input message: " + message);
+                }
+            });
+
+            mSimulatorTcpClient.run();
+
+            return null;
+        }
     }
 }
