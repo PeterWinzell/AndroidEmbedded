@@ -270,7 +270,7 @@ public class SensorMockedHalImpl extends SensorHalImpl {
             {
                 try {
 
-                    new ConnectTask().execute("");
+                   new ConnectTask().execute("");
                     // If we don't add a value for the handbrake we will crash if we inject the speed of 0 , due to
                     // a bug in DrivingStatePolicyClass
                     mMockedVehicleHal.injectEvent(VehiclePropValueBuilder.newBuilder(VehicleProperty.PARKING_BRAKE_ON)
