@@ -3,6 +3,8 @@ package com.android.jaywaycars.sensortestview;
 import android.app.Application;
 import android.app.IntentService;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
@@ -23,8 +25,8 @@ import java.net.Socket;
  */
 
 public class SimulatorTcpClient {
-    public  String SERVER_IP = "192.168.10.10"; //your computer IP address
-    public  int SERVER_PORT = 5678;
+    private  String SERVER_IP;
+    private  String SERVER_PORT;
     // message to send to the server
     private String mServerMessage;
     // sends message received notifications
@@ -42,12 +44,14 @@ public class SimulatorTcpClient {
      * Constructor of the class. OnMessagedReceived listens for the  messages received from server
      */
     public SimulatorTcpClient(OnMessageReceived listener) {
+        SharedPreferences sP = PreferenceManager.getDefaultSharedPreferences(SensorActivity.getContext());
+        SERVER_IP = sP.getString("PREF_IP","1.1.1.1");
+        SERVER_PORT = sP.getString("PREF_PORT","1234");
         mMessageListener = listener;
 
         prefs = new TrayPreferences(SensorActivity.getContext(),"tcp-prefs",1, TrayStorage.Type.DEVICE);
 
-        String ipS = prefs.getString("ip-adress","1.1.1.1");
-        Log.i("SimulatorTcpClient",ipS);
+        Log.i("SimulatorTcpClient", SERVER_IP);
     }
 
     /**
@@ -95,7 +99,7 @@ public class SimulatorTcpClient {
             Log.e("TCP Client", "C: Connecting...");
 
             //create a socket to make the connection with the server
-            Socket socket = new Socket(serverAddr, SERVER_PORT);
+            Socket socket = new Socket(serverAddr, new Integer(SERVER_PORT).intValue());
 
             try {
                 Log.i("Debug", "inside try catch");
