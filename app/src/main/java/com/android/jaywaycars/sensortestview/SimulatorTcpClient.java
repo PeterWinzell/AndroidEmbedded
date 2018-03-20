@@ -1,6 +1,14 @@
 package com.android.jaywaycars.sensortestview;
 
+import android.app.Application;
+import android.app.IntentService;
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.util.Log;
+
+import net.grandcentrix.tray.AppPreferences;
+import net.grandcentrix.tray.TrayPreferences;
+import net.grandcentrix.tray.core.TrayStorage;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -15,8 +23,8 @@ import java.net.Socket;
  */
 
 public class SimulatorTcpClient {
-    public static final String SERVER_IP = "192.168.10.10"; //your computer IP address
-    public static final int SERVER_PORT = 5678;
+    public  String SERVER_IP = "192.168.10.10"; //your computer IP address
+    public  int SERVER_PORT = 5678;
     // message to send to the server
     private String mServerMessage;
     // sends message received notifications
@@ -28,11 +36,18 @@ public class SimulatorTcpClient {
     // used to read messages from the server
     private BufferedReader mBufferIn;
 
+    private TrayPreferences prefs;
+
     /**
-     * Constructor of the class. OnMessagedReceived listens for the messages received from server
+     * Constructor of the class. OnMessagedReceived listens for the  messages received from server
      */
     public SimulatorTcpClient(OnMessageReceived listener) {
         mMessageListener = listener;
+
+        prefs = new TrayPreferences(SensorActivity.getContext(),"tcp-prefs",1, TrayStorage.Type.DEVICE);
+
+        String ipS = prefs.getString("ip-adress","1.1.1.1");
+        Log.i("SimulatorTcpClient",ipS);
     }
 
     /**
@@ -120,6 +135,7 @@ public class SimulatorTcpClient {
         }
 
     }
+
 
     //Declare the interface. The method messageReceived(String message) will must be implemented in the MyActivity
     //class at on asynckTask doInBackground

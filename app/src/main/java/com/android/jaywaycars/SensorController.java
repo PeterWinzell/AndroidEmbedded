@@ -16,10 +16,10 @@ public class SensorController {
         appCtx = app_context;
         sensors = new SensorModel(app_context);
         // this.event = event;
-        startDataFlow();
+        //startDataFlow();
     }
 
-    void startDataFlow(){
+    public void startDataFlow(){
         Thread speedUpdate = new Thread()
         {
             public void run()

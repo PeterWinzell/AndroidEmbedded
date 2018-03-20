@@ -114,6 +114,7 @@
     <orderEntry type="library" scope="TEST" name="javax.inject:javax.inject:1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="__local_aars__:/home/local/VCCNET/pwinzell/AndroidStudioProjects/SensorTestView/app/libs/classes_hidl.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="net.grandcentrix.tray:tray-0.12.0" level="project" />
     <orderEntry type="library" name="com.android.support.constraint:constraint-layout-solver:1.0.2@jar" level="project" />
     <orderEntry type="library" name="com.android.support.constraint:constraint-layout-1.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:runner-1.0.1" level="project" />

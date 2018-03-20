@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Car simulation network setup">
+
+        <EditTextPreference
+           android:key="PREF_IP"
+           android:title="car-simulation-server-ip"
+           android:summary="The car simulator is on this ip"
+       />
+
+       <EditTextPreference
+           android:key="PREF_PORT"
+           android:title="car-simulation-server-port"
+           android:summary="The car simulator uses this port"
+       />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

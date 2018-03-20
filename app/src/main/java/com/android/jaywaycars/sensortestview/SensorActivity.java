@@ -1,6 +1,7 @@
 package com.android.jaywaycars.sensortestview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -32,7 +33,6 @@ public class SensorActivity extends AppCompatActivity {
        // mspeedRpmView = (View) findViewById(R.id.spee)
 
         setContext(getApplicationContext());
-
         controller = new SensorController(this);
 
     }
@@ -52,5 +52,14 @@ public class SensorActivity extends AppCompatActivity {
 
     public synchronized void updateRPM(int rpm){
         rpmOutputView.setValue(rpm);
+    }
+
+    public void openSettings(View view){
+        Intent intent = new Intent(this,SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSubscription(View view){
+        controller.startDataFlow();
     }
 }
